@@ -58,18 +58,18 @@ public class ChomperEntity extends Monster implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", true));
         return PlayState.CONTINUE;
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("armslam", false));
             this.swinging = false;
         }
 

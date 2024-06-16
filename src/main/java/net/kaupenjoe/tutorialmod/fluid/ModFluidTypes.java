@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod.fluid;
 
+import com.mojang.math.Vector3f;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -9,7 +10,6 @@ import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.joml.Vector3f;
 
 public class ModFluidTypes {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");

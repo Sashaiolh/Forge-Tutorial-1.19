@@ -3,7 +3,6 @@ package net.kaupenjoe.tutorialmod.screen;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.entity.GemInfusingStationBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.items.SlotItemHandler;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class GemInfusingStationMenu extends AbstractContainerMenu {
     public final GemInfusingStationBlockEntity blockEntity;
@@ -46,8 +44,6 @@ public class GemInfusingStationMenu extends AbstractContainerMenu {
     }
 
     public boolean isCrafting() {
-
-
         return data.get(0) > 0;
     }
 
